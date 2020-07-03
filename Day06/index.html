@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS复合选择器</title>
+    <style>
+        .one {
+            text-align: left;
+            text-indent: 2em;
+            background-color: #fff;
+            height: 200px;
+            width: 200px;
+        }
+
+        /* 后代选择器 */
+        ol li {
+            color: blue
+        }
+
+        /* 子代选择器 */
+        .child>a {
+            color: rgb(43, 226, 134);
+        }
+
+        /* 并集选择器 */
+        .nav,
+        .navi,
+        .navigation li {
+            color: red
+        }
+
+        /* 链接伪类选择器 */
+        a {
+            text-decoration: None;
+        }
+
+        a:link {
+            color: black
+        }
+
+        a:visited {
+            color: red
+        }
+
+        a:hover {
+            color: green
+        }
+
+        a:active {
+            color: violet
+        }
+
+        /* focus选择器*/
+        input:focus {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 后代选择器 -->
+    后代选择器案例：
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <hr>
+    <!-- 子选择器 -->
+    子选择器案例：
+    <div class="child">
+        <a href="http://www.baidu.com">百度一下</a>
+        <p><a href="http://www.baidu.com">再百度一下</a></p>
+    </div>
+    <hr>
+    并集选择器案例：
+    <div class="nav">百</div>
+    <p class="navi">度</p>
+    <div class="navigation">
+        <li>一</li>
+        <li>下</li>
+    </div>
+    <hr>
+    链接伪类选择器案例：
+    <div>
+        <a href="http://www.baidu.com"> 百度一下</a>
+        <a href="http://swww.google.cn"> 谷歌一下</a>
+    </div>
+    <hr>
+    focus选择器案例:
+    <div>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+
+</body>
+
+</html>
