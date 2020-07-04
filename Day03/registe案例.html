@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+</head>
+<body>
+    <h3>青春不常在，抓紧谈恋爱</h3>
+    <table>
+        <tr>
+            <td valign="top">
+                姓名<br>
+                性别<br>
+                生日<br>
+                所在地区<br>
+                婚姻状况<br>
+                学历<br>
+                喜欢的类型<br>
+                自我介绍<br>
+            </td> 
+            <td valign="top">
+                <form action="register_page.php" method="GET">
+                    <input type="text"><br>
+                    <input type="radio" value="男" name="sex" id="nan"><label for="nan">男</label>
+                    <input type="radio" value="女" name="sex" id="nv"><label for="nv">女</label><br>
+                    <input type="date"><br>
+                    <input type="text" placeholder="北京朝阳区"><br>
+                    <input type="radio" value="未婚" name="marriage" id="unmarrige"><label for="unmarrige">未婚</label>
+                    <input type="radio" value="已婚" name="marriage" id="married"><label for="married">已婚</label>
+                    <input type="radio" value="离婚" name="marriage" id="divorce"><label for="divorce">离婚</label><br>
+                    <input type="text" value="小学" ><br>
+                    <input type="checkbox" value="可爱型" name="like" id="keai"><label for="keai">可爱型</label>
+                    <input type="checkbox" value="淑女型" name="like" id="shunv"><label for="shunv">淑女型</label>
+                    <input type="checkbox" value="御姐型" name="like" id="yujie"><label for="yujie">御姐型</label><br>
+                    <textarea placeholder="自我介绍"></textarea><br>
+                    <input type="submit" value="免费注册"><br>
+                    <input type="checkbox" id="tiaokuan"><label for="tiaokuan">我同意注册条款和会员加入标准</label>
+                    <h3>我承诺</h3>
+                    <ul>
+                        <li>年满18岁,单身</li>
+                        <li>抱着严肃的态度</li>
+                        <li>真诚寻找另一半</li>
+                    </ul>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
