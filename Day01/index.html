@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML学习</title>
+    <style type="text/css">
+        h1 {color: red}
+        p {color: blue}
+    </style>
+</head>
+<body background="images/background.jpg">
+    <!-- heading 标题 -->
+    <h1>这是h1标题</h1>
+    <h2>这是h2标题</h2>
+    <h3>这是h3标题</h3>
+    <h4>这是h4标题</h4>
+    <h5>这是h5标题</h5>
+    <h6>这是h6标题</h6>
+    <!-- 段落 p -->
+    <p>P:这是一个段落</p>
+    <p>《西游记》又称央视86版《西游记》，改编自明代小说家吴承恩同名文学古典名著。是由中央电视台、中国电视剧制作中心出品的一部25集古装神话剧。由杨洁执导，戴英禄，杨洁，邹忆青共同编剧，六小龄童、徐少华、迟重瑞、汪粤、马德华、闫怀礼等主演，李世宏、李扬、张云明、里坡等担任主要配音。 [1] 
+        该剧讲述的是孙悟空、猪八戒、沙僧辅保大唐高僧玄奘去西天取经，师徒四人一路抢滩涉险，降妖伏怪，历经八十一难，取回真经，终修正果的故事。
+        《西游记》于1982年7月3日开机，同年10月1日首播试集《除妖乌鸡国》。1986年春节在央视首播前11集，1988年25集播出。缅语配音版《西游记》开播仪式于2019年9月14日在缅甸仰光举行，将于近期在当地电视台播出。 [2] 
+        1986年春节一经播出，轰动全国，老少皆宜，获得了极高评价，造就了89.4%的收视率神话，至今仍是寒暑假被重播最多的电视剧，重播次数超过3000次，依然百看不厌，成为一部公认的无法超越的经典。</p>
+    <!-- 链接 -->
+    <a id="id_baidu" href="http://www.baidu.com" target="_blank">a:超链接>>>>百度一下</a><br>
+    <a href="http://www.baidu.com" style="text-decoration:none" >没有下划线的超链接>>>> 百度一下</a>
+    <br>
+    <a href="http://www.baidu.com" target="_blank"> <img src="images/timg.jpg" alt="美女" width="50" height="50" title="大美女"/></a>
+    <hr>
+    <img src="http://www.runoob.com/images/pulpit.jpg" width="50" height="50" alt="旅游"/>
+    <hr>
+    <b>b:加粗文本"</b><br>
+    <i>i:斜体文本</i><br>
+    sub:这是<sub>下标</sub> <br>
+    sup:这是<sup>上标</sup> <br>
+    <strong>strong:加粗文本</strong><br>
+    <big>big:字体放大</big> <br>
+    <small>small:字体缩小</small> <br>
+    <em>em:斜体文本</em>
+    <pre>pre：会对空格    和换行
+
+        进行保留。
+    </pre>
+    <hr>
+    计算器标签
+    <code>code:电脑自动输入</code><br>
+    <kbd>kbd:键盘输入</kbd><br>
+    <tt>tt:打字机文本</tt><br>
+    <samp>samp:计算机代码</samp><br>
+    <var>var: 计算机变量</var><br>
+    <hr>
+    address:显示联系信息 <address>
+        Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+    <hr>
+    abbr: 显示缩写内容  <abbr title="HyperText Markup Language">HTML</abbr> <br>
+    acronym: 首字母缩写 <acronym title="World Wide Web">WWW </acronym><br>
+    dfn:显示缩写内容(如果设置了dfn元素的title属性，则定义项目),使用abbr代替使用<br>
+    <dfn title="World Health Oraganzation">WHO</dfn>成立于1948.
+    <hr>
+    文本格式化<br>
+    bdo:改变文字显示方向, dir控制方向 rtl:从右往左显示
+    <p>这是个段落</p>
+    <bdo dir="rtl">这是个段落</bdo><br>
+    <hr>
+    引用：<br>
+    blockquote:块引用,浏览器会对blockquote元素进行缩进处理<br>
+    这是块引用<blockquote>人的生命是有限的，可是为人民服务是无限的，
+        我要把有限的生命投入到无限的为人民服务之中去！——雷锋</blockquote>
+    q: 这是短引用:
+        <q>学无止境。——荀子</q>
+    <hr>
+    删掉字效果del和插入字效果ins:<br>
+
+    租女朋友（<del>30</del>）<ins>25</ins>块
+    <hr>
+    cite元素定义著作的标题，通常会以斜体显示元素内容
+    <p><cite>《西游记》</cite>又称央视86版<cite>《西游记》</cite>，改编自明代小说家吴承恩同名文学古典名著。</p>
+    <hr>
+    css样式：通过link标签链接一个外部样式表，内部样式则需要在head中用style标签进行定义
+    <hr>
+    图片对齐方式：align (bottom, middle, top, left, right), 默认是bottom
+    <p>
+        图片和文字底部对齐：<img src="images/eg_cute.gif" align="bottom"/>
+    </p>
+    <p>
+        图片和文字居中对齐：<img src="images/eg_cute.gif" align="middle"/>
+    </p>
+    <p>
+        图片和文字顶部对齐：<img src="images/eg_cute.gif" align="top"/>
+    </p>
+    <p>
+        图片在文字右侧显示：<img src="images/eg_cute.gif" align="right"/>
+    </p>
+    <p>
+        图片在文字左侧显示：<img src="images/eg_cute.gif" border="5" align="left"/>
+    </p><br>
+    图片不能实现时，可以设置alt显示替换文本:
+    <p>
+        <img src="adadsada" alt="图片显示不了了"/>
+    </p>
+</body>
+</html>

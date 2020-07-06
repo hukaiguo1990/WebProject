@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS样式表</title>
+    <style>
+        p {
+            text-indent: 2em;
+        }
+        .aqua {
+            background-color: aqua;
+        }
+        .indent {
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    按照CSS样式书写的位置可分为三大类：1.行内样式表（行内式），2.内部样式表（嵌入式），3.外部样式表（链接式）<br>
+    <h4>行内样式表：</h4>
+    <P>在元素标签内部的style属性中设置CSS样式，使用于简单的样式修改</P>
+    <pre class="aqua indent"> &lt div style="color：red; font-size: 12px;"&gt 青春不常在，抓紧谈恋爱 &lt /div &gt</pre><br>
+    <h4>内部样式表：</h4>
+    <p>写在html页面内部，将所有的CSS样式抽离出来放到&lt style &gt标签中</p>
+    <pre class="aqua indent">   &lthead&gt
+            &ltstyle&gt
+                p {
+                    text-indent: 2em;
+                }
+                pre {
+                    text-indent: 2em;
+                    background-color: aqua;
+                }
+            &lt/style&gt
+      &lt/head&gt
+    </pre>
+    <h4>外部樣式表：</h4>
+    <p>样式单独写在一个CSS文件中，之后把CSS文件引入到html页面中使用</p>
+    <pre> 
+        1.新建一个后缀名为.css的样式文件，把所有css样式代码都放到这个文件中
+        2.在html页面中使用&ltlink&gt标签引入这个文件
+    </pre>
+    <pre class="aqua">
+        &lt link rel="stylesheet" href="css文件路径"&gt
+    </pre>
+
+    
+</body>
+</html>

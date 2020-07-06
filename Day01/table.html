@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 表格</title>
+    <style type="text/css">
+    thead {color: red}
+    tbody {background-color: aqua}
+    tfoot {color: green}        
+    </style>
+</head>
+<body>
+    caption:表格标题; tr：行; th: 表头; td：表格数据 <br>
+    <P>一行一列：</P>
+    <table border="1">
+        <tr>
+            <td>100</td>
+        </tr>
+    </table>
+    <p>两行三列:</p>
+    <table border="1">
+        <caption>我的表格</caption>
+        <tr>
+            <th>第一列</th>
+            <th>第二列</th>
+            <th>第三列</th>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td></td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+        </tr>
+    </table>
+    <p><b>跨行跨列table: <em>colspan</em> :跨列;  <em>rowspan</em> :跨行</b></p>
+    <table border="1">
+        <caption>我的表格</caption>
+        <thead>        
+            <tr>
+                <th>姓名</th>
+                <th colspan="2">别名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>魏嘤嘤</td>
+                <td>sb</td>
+                <td>2b</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>王坤</td>
+                <td>蔡徐坤</td>
+                <td>坤仔</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <table border="1">
+        <caption>表格标题</caption>
+        <tr>
+            <td>姓名</td>
+            <td>魏嘤嘤</td>
+        </tr>
+        <tr>
+            <td rowSpan="2">别名</td>
+            <td>sb</td>
+        </tr>
+        <tr>
+            <td>2b</td>
+        </tr>
+    </table>
+    <hr>
+    <p>表格中的元素数据有段落p,表格table,列表li</p>
+    <table border="2">
+        <caption>我的表格</caption>
+        <tr>
+            <td>
+                <p>这是个段落</p>
+            </td>
+            <td>    
+                <p>这是个表格</p>
+                <table border="1" width="400">
+                    <tr>
+                        <td align="right">a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td align="right">c</td>
+                        <td>d</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>这是个列表</p>
+                <li>sb</li>
+                <li>2b</li>
+                <li>250</li>
+            </td>
+            <td>这里啥都不是</td>
+        </tr>
+    </table>
+    <hr>
+</body>
+</html>
