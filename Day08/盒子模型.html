@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        .solid {
+            border-width: 5px;
+            border-style: solid;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+        }
+
+        .dashed {
+            width: 100px;
+            height: 100px;
+            border-width: 5px;
+            border-style: dashed;
+            border-color: pink;
+        }
+
+        .dotted {
+            width: 100px;
+            height: 100px;
+            border-width: 5px;
+            border-style: dotted
+        }
+
+        .border {
+            width: 100px;
+            height: 100px;
+            border: 5px solid red;
+        }
+
+        .auto {
+            background-color: thistle;
+            width: 200px;
+            height: 48px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    所谓的盒子模型：就是把Html页面中的布局元素看作是一个矩形的盒子，也就是装内容的容器<br>
+    它包括：外边距margin，内边距padding，外边框border，内容content
+    <br>
+    <h3>border:外边框</h3>
+    border-width:边框的粗线<br>
+    border-style:边框的样式常用的有：solid实线，dashed虚线，dotted点线<br>
+    solid实例：
+    <div class="solid"></div>
+    dashed实例：
+    <div class="dashed"></div>
+    dotted实例：
+    <div class="dotted"></div>
+    边框属性简写方式：border: 5px solid red;
+    <div class="border"></div>
+    border-collapse: collapse合并相邻的边框
+    <hr>
+    <h3>padding:内边距</h3>
+    包含：padding-top,padding-left,padding-right,padding-bottom
+    <h3>margin:外边距</h3>
+    包含:margin-left,margin-top,margin-right,margin-bottom
+    <br>
+    如果让盒子水平居中显示：1.盒子必须指定宽度，2.盒子的左右margin设置为auto
+    <div class="auto"></div>
+    <br>
+    <h4>嵌套块元素垂直设置外边距塌陷问题：</h4>
+    对于两个嵌套关系的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值
+    <br>
+    解决方案：
+    <ol>
+        <li>可以给父元素设置上边框border</li>
+        <li>可以给父元素设置上内边距</li>
+        <li>(正解)可以给父元素添加overflow：hidden</li>
+    </ol>
+</body>
+
+</html>
