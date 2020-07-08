@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页布局</title>
+    <style>
+        .phone {
+            width: 1330px;
+            height: 655px;
+            background-color: #c5c5c5;
+            margin: 100px auto;
+        }
+
+        .phone .left {
+            width: 338px;
+            height: 655px;
+            float: left;
+        }
+
+        .phone .right {
+            width: 992px;
+            height: 655px;
+            float: left;
+        }
+
+        .phone .left img {
+            width: 338px;
+            height: 655px;
+        }
+
+        .phoneItem {
+            width: 234px;
+            height: 300px;
+            margin-left: 14px;
+            margin-bottom: 20px;
+            float: left;
+            background-color: #fff
+        }
+
+        .phoneItem img {
+            width: 160px;
+            height: 160px;
+            margin: 0 34px;
+        }
+
+        .phoneItem .title {
+            margin: 0;
+            font-weight: 400;
+            font-size: 14px;
+            padding: 5px 34px;
+            text-align: center;
+            height: 14px;
+            line-height: 14px;
+        }
+
+        .phoneItem .content {
+            margin: 0;
+            font-size: 12px;
+            color: #b0b0b0;
+            text-align: center;
+        }
+
+        .price {
+            text-align: center;
+            font-size: 14px;
+            color: coral;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .price .del {
+            text-decoration: line-through;
+            color: #b0b0b0;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>传统网页布局的三种方式：</h3>
+    <ol>
+        <li>普通流/标准流</li>
+        <li>浮动</li>
+        <li>定位</li>
+    </ol>
+    <h4>普通流（标准流/文档流）</h4>
+    标准流就是标签按照规定好的方式进行排列；
+    <hr>
+    <h4>浮动float</h4>
+    网页布局第一准则：多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动<br>
+    浮动float:用于创建浮动框，将其移动到一边，直到屏幕的左边缘或者右边缘或者另外一个浮动框的边缘
+    <h5>浮动特性：</h5>
+    <ol>
+        <li>浮动元素会脱离标准流（脱标)
+            <ol type="a">
+                <li>脱离标准流的控制，移动到指定的位置</li>
+                <li>浮动的盒子不再保留原先的位置。</li>
+            </ol>
+        </li>
+        <li>浮动的元素会一行内显示并且元素顶部对齐
+            <ol type="a">
+                <li>浮动的元素是相互贴近在一起的，不会有缝隙</li>
+                <li>如果父元素装不下所有的浮动元素，多出的元素会另起一行对齐显示</li>
+            </ol>
+        </li>
+
+        <li>浮动的元素具有行内块元素的特性
+            <ol type="a">
+                <li>如果行内元素有了浮动，则不需要转换成行内块元素就可以设置宽高</li>
+                <li>如果没设置宽度，则根据元素内容的宽度进行显示的</li>
+            </ol>
+        </li>
+    </ol>
+    <h4>浮动案例：小米手机</h4>
+    <div class="phone">
+        <div class="left">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/574c6643ab91c6618bfb2d0e2c761d0b.jpg?thumb=1&w=468&h=1228&f=webp&q=90"
+                alt="小米手机">
+        </div>
+        <div class="right">
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+            <div class="phoneItem">
+                <img src=" https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0099822e42b4428cb25c4cdebc6ca53d.jpg?thumb=1&w=400&h=400&f=webp&q=90"
+                    alt="小米手机">
+                <h4 class="title">小米10 青春版 5G</h4>
+                <p class="content">50倍潜望远式变焦/轻薄5G手机</p>
+                <div class="price">
+                    <span class="num">1899元起</span><span class="del">2099元</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
