@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式</title>
+    <Style>
+        a {
+            display: block;
+            text-decoration:none;
+            color: white;
+            width: 320px;
+            height: 48px;
+            background-color: #55585a;
+            font-size: 14px;
+            text-indent:2em;
+            line-height: 48px;
+        }
+        a:hover {
+            background-color: #ff6700;
+        }
+
+    </Style>
+</head>
+<body>
+    <h4>块元素</h4>
+    常见的块元素有&lth1&gt-&lth6&gt,&ltp&gt,&ltdiv&gt,&ltul&gt,&ltol&gt,&ltli&gt,&lttable&gt
+    <br>
+    特点：
+    <ol>
+        <li>独占一行</li>
+        <li>高度，宽度，外边距，内边距都可以控制</li>
+        <li>宽度不设置式父级元素的100%宽度</li>
+        <li>是个容器（盒子），里面可以添加行内元素或者块级元素</li>
+        <li>像文字类的标签 &lth1&gt - &lth6&gt, &ltp&gt 不能其他的块级元素</li>
+    </ol>
+    <hr>
+    <h4>行内元素</h4>
+    常见的行内元素有&lta&gt,&ltspan&gt,&ltstrong&gt,&ltem&gt等等
+    <br>
+    特点：
+    <ol>
+        <li>相邻的行内元素都在一行内显示，一行可以多个行内元素</li>
+        <li>行内元素不能设置宽高</li>
+        <li>默认的宽度就是它本身内容的宽度</li>
+        <li>行内元素只能容纳文本或者其他的行内元素</li>
+        <li>&lta&gt不能再放&lta&gt链接元素，但可以放块级元素</li>
+    </ol>
+    <hr>
+    <h4>行内块元素</h4>
+    &ltimg&gt,&ltinput&gt,&lttd&gt元素同时具有块元素和行内元素的特点，我们称它们为行内块元素
+    <br>
+    特点：
+    <ol>
+        <li>一行可以显示多个，但它们之间会有空白缝隙</li>
+        <li>默认宽度就是它们本身内容的宽度</li>
+        <li>高度，行高，外边距，内边距都可以控制设置</li>
+    </ol>
+    <hr>
+    <h4>元素显示模式的转化</h4>
+    <ol>
+        <li>转化为块元素：display:block</li>
+        <li>转化为行内元素：display：inline</li>
+        <li>转化为行内块元素：display:inline-block</li>
+    </ol>
+    <hr>
+    <h4>行内元素转块元素案例：</h4>
+    <a href="">手机 电话卡</a>
+    <a href="">电视 盒子</a>
+    <a href="">笔记本 电脑</a>
+    <a href="">智能 路由器</a>
+    <a href="">健康 儿童</a>
+    <a href="">耳机 音响</a>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html背景设置方式</title>
+</head>
+<body>
+    <h4>background-color:设置背景颜色</h4>
+    用法：
+    <pre>
+        div {
+            background-color: #red;
+        }
+    </pre>
+    <hr>
+    <h4>background-image:设置背景图片</h4>
+    用法：必须要用url方式
+    <pre>
+        div {
+            background-image: url(image/a.png);
+        }
+    </pre>
+    <hr>
+    <h4>background-repeat:设置背景平铺</h4>
+    用法：参数有repeat背景平铺,no-repeat背景不平铺,repeat-x：背景沿x轴平铺,repeat-y背景沿y轴平铺
+    <pre>
+        div {
+            background-repeat: repeat;
+        }
+    </pre>
+    <hr>
+    <h4>background-position:设置背景图片的位置</h4>
+    用法：position后可以跟方位名词（top,bottom,left,right,center）,也可以跟精确的数值;如果是精确数值时，一个参数必须是x轴的，第二参数是y轴的，顺序不能替换
+    <pre>
+        div {
+            background-position: center;
+        }
+    </pre>
+    <hr>
+    <h4>background-attachment:设置背景滚动</h4>
+    用法：scroll(滚动)，fixed(固定的)
+    <pre>
+        div {
+            background-attachment: fixed;
+        }
+    </pre>
+    <h4>背景色半透明：background: rgba(0,0,0,0.5)</h4>
+    用法:
+    <pre>
+        div {
+            background: rgba(0,0,0,0.5);
+        }
+    </pre>
+</body>
+</html>
