@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS样式小细节</title>
+    <style>
+        input,
+        button,
+        textarea {
+            outline: none;
+        }
+
+        .resize {
+            resize: none;
+        }
+
+        .userInfo {
+            width: 200px;
+            height: 80px;
+            background-color: pink;
+        }
+
+        .userName {
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .userInfo img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 30px;
+        }
+        
+        .bug {
+            border: 1px solid #000;
+        }
+        
+        .bugFix {
+            border: 1px solid #000;
+        }
+
+        .bugFix img{
+            /* vertical-align: middle; */
+            display: block;
+        }
+
+        .ellipsis {
+            width: 150px;
+            height: 80px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            /* 1.强制设置文本单行显示 */
+            white-space: nowrap;
+            /* 2.设置溢出部分不显示 */
+            overflow: hidden;
+            /* 3.显示省略号 */
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <h4>1.去掉input, button，textarea的轮廓边：outline: none或者 outline: 0;</h4>
+    <br>
+    <input type="text">
+    <button>确定</button>
+    <textarea></textarea>
+    <br>
+    <h4>2.textarea去掉右下角拉伸图标： resize:none</h4>
+    <textarea class="resize"></textarea>
+    <h4>3.图片和文字上下居中对齐</h4>
+    <div class="userInfo">
+        <img src="images/icon.jpg" alt="头像">
+        <span class="userName">无名</span>
+    </div>
+    <h4>4.图片底部有空白缝隙问题</h4>
+    <div class="bug">
+        <img src="images/a.jpg" alt="">
+        <span>Jason Zhang张杰</span>
+    </div>
+    解决方案：1.使用vertical-align属性; 2.转化成行内块元素display:block;
+    <div class="bugFix">
+        <img src="images/a.jpg" alt="">
+    </div>
+    <h5>5.文字溢出用省略号...显示: text-overflow: ellipsis</h5>
+
+    <div class="ellipsis">向往光明，却被黑暗笼罩</div>
+
+</body>
+</html>

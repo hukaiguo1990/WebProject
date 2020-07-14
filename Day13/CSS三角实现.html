@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小三角实现</title>
+    <style>
+        .test {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: red;
+        }
+
+        .test:before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: -10px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 5px solid transparent;
+            border-bottom-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+        利用border属性实现三角
+    </div>
+</body>
+</html>

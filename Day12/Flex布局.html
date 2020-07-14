@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex弹性布局</title>
+    <style>
+        .direc {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: pink;
+            flex-direction: column;
+        }
+
+        .direc span {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .justify {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: pink;
+            flex-direction: row;
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            /* space-around 平分剩余空间 */
+            /* justify-content: space-around; */
+            /* 先两边贴边，再平分剩余空间 */
+            justify-content: space-between;
+        }
+
+        span {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            display: flex;
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+            flex-wrap: wrap;
+        }
+
+        .alignItems {
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+            justify-content: center;
+            align-items: center
+        }
+        .alignContent {
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+            /* align-content: center; */
+            justify-content: space-between;
+            align-content: space-around;
+            flex-wrap: wrap;
+        }
+        .father {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.3)
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            width: 560px;
+            height: 200px;
+            padding: 50px 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        .content img {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+        .content .text {
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            flex: 1;
+            margin: 0 20px;
+            background-color: green;
+        }
+
+        .content .text p {
+            height: 18px;
+            line-height: 18px;
+            padding: 10px 0;
+        }
+        .content .text p:nth-child(2) {
+            flex: 1;
+        }
+
+        .content .action {
+            width: 100px;
+            height: 50px;
+        }
+        
+        .bottomBtn {
+            display: flex;
+            align-items: center;
+            width: 600px;
+            height: 100px;
+        }
+
+        .action1 {
+            width: 100px;
+            height: 50px;
+            border: 0;
+            background-color: #fff;
+        }
+
+        .action2 {
+            width: 100px;
+            height: 50px;
+            border: 0;
+            background-color: #fff;
+        }
+
+        button:active {
+            background-color: pink;
+            outline: 0;
+        }
+
+        button:focus {
+            outline: 0; 
+        }
+    </style>
+</head>
+<body>
+    <h4>父元素属性</h4>
+    <ol>
+        <li>flex-direction: 设置主轴方向; row是横向排列，column是竖向排列</li>
+        <li>justify-content: 设置主轴上的子元素排列方式</li>
+        <li>flex-wrap:设置子元素是否换行</li>
+        <li>align-content:设置侧轴上子元素的排列方式（多行）</li>
+        <li>align-items: 设置侧轴上的子元素排列方式（单行）</li>
+        <li>flex-flow: 复合属性，相当于同时设置了flex-direction 和 flex-wrap</li>
+    </ol>
+    flex-direction案例：
+    <div class="direc">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <h5>justify-content:设置子元素排列方式：</h5>
+    <ol>
+        <li>justify-content: flex-start:子元素紧靠着左侧</li>
+        <li>justify-content: flex-end:子元素紧靠着右侧</li>
+        <li>justify-content: center: 子元素居中对齐</li>
+        <li>justify-content: space-around: 平分剩余空间</li>
+        <li>justify-content: space-between: 两边贴边，再平分剩余元素</li>
+    </ol>
+    justify-content案例：
+    <div class="justify">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+
+    flex-wrap: 子元素换行，flex默认不换行,子元素装不下的话会缩小子元素的大小。
+    <div class="wrap">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+
+    align-items: 设置侧轴子元素对齐
+    <div class="alignItems">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    align-content: 设置侧轴多行元素时的对齐方式
+    <div class="alignContent">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+    flex-flow: row wrap;相当于设置了flex-direction: row; flex-wrap: wrap;
+    <div class="father">
+        <div class="content">
+            <div class="icon"><img src="#" alt="头像"></div>
+            <div class="text">
+                <p>AAAAAAAAAAAA</p>
+                <p>BBBBBBBBBBB</p>
+                <p>cccccc</p>
+            </div>
+            <button class="action">action</button>
+        </div>
+        <div class="bottomBtn">
+            <button class="action1">action1</button>
+            <button class="action2">action2</button>
+        </div>
+    </div>
+</body>
+</html>

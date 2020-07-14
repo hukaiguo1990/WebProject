@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精灵图</title>
+    <style>
+        .sprites {
+            height: 57px;
+            width: 57px;
+            /* background-image: url(images/index.png);
+            background-position: -183px 0; */
+            background: url(images/index.png) no-repeat -183px 0;
+        }
+        .sprites1 {
+            width: 20px;
+            height: 20px;
+            background: url(images/index.png) no-repeat -140px -68px;
+        }
+
+        .k {
+            display: inline-block;
+            width: 106px;
+            height: 110px;
+            background: url(images/abcd.jpg) no-repeat -494px -141px;
+        }
+
+        .u {
+            display: inline-block;
+            width: 119px;
+            height: 110px;
+            background: url(images/abcd.jpg) no-repeat -473px -420px;
+        }
+
+        .n {
+            display: inline-block;
+            width: 119px;
+            height: 110px;
+            background: url(images/abcd.jpg) no-repeat -251px -276px;  
+        }
+
+    </style>
+</head>
+<body>
+    核心：精灵技术主要是针对对于背景图片使用，就是把多个小背景图片整合到一张大图片中
+    <br> 这个大图片也叫做sprites 精灵图或者雪碧图。
+    <br>主要是借助于背景位置来实现-background-position
+</body>
+<div class="sprites"></div>
+<div class="sprites1"></div>
+精灵图案例:
+<br>
+<span class="k"></span>
+<span class="u"></span>
+<span class="n"></span>
+</html>

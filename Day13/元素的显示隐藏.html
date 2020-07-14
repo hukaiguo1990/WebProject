@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示和隐藏</title>
+    <style>
+        .A {
+            height: 50px;
+            width: 50px;
+            background-color: green;
+            display: none;
+        }
+
+        .B {
+            height: 50px;
+            width: 50px;
+            background-color:hotpink;
+        }
+    </style>
+</head>
+<body>
+    元素显示隐藏方式：
+    <ol>
+        <li>display: none隐藏元素，block显示元素 ;隐藏的元素不占有原有位置</li>
+        <li>visibility: </li>
+        <li>overflow</li>
+    </ol>
+    Display案例：
+    <div class="A"></div>
+    <div class="B"></div>
+    visibility案例：隐藏的元素继续占有原有的位置
+    <ol>
+        <li>inherit 继承上一个父对象的可见性</li>
+        <li>visible 显示元素</li>
+        <li>hidden 隐藏元素</li>
+    </ol>
+    overflow溢出部分的显示和隐藏
+    <ol>
+        <li>visible:溢出的部分不剪切不添加滚动条</li>
+        <li>hidden: 溢出的部分隐藏掉</li>
+        <li>scroll: 不管内容是否溢出，都显示滚动条</li>
+        <li>auto：超出的时自动显示滚动条，不超出时就不显示滚动条</li>
+    </ol>
+</body>
+</html>
