@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新特性</title>
+</head>
+<body>
+    <h3>新增选择器</h3>
+    <ol>
+        <li>属性选择器</li>
+        <li>结构伪类选择器</li>
+        <li>伪元素选择器</li>
+    </ol>
+    <h4>属性选择器：</h4>
+    E[att]： 选择具有att属性的E元素；如 input[type]表示选择有type属性的input元素.<br>
+    E[att="val"]:  选择具有att属性且属性值是val的E元素;<br>
+    E[att^="val"]:  匹配具有att属性且属性值以val开头的E元素；<br>
+    E[att$="val"]:  匹配具有att属性且属性值以val结尾的E元素；<br>
+    E[att*="val"]： 匹配具有att属性且属性值中含有val的E元素；<br>
+    <hr>
+    <h4>结构伪类选择器</h4>
+    E:first-child 选择E元素的第一个子元素<br>
+    E:last-child  选择E元素的最后一个子元素<br>
+    E:nth-child(n) 选择E元素的第n个子元素<br>
+    nth-child(even) even:选择所有偶数的孩子,odd 选择所有奇数的孩子。<br>
+    E:first-of-child<br>
+    E:last-of-child <br>
+    E:nth-of-type(n) :对父元素中指定子元素进行排序
+    <hr>
+    <h4>伪元素选择器</h4>
+    ::before和::after会创建一个元素，但是是行内元素<br>
+    必须要写content属性，否则侧伪元素不生效。
+    伪元素选择器和标签选择器一样的权重, 都是1.
+    <hr>
+    <h4>CSS3盒子模型</h4>
+    box-sizing: border-box设置该属性后，margin和padding就不会撑大盒子了。
+    
+</body>
+</html>
