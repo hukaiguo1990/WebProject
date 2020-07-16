@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 50px;
+        }
+        span {
+            float: left;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            background-color:burlywood;
+            padding: 0;
+            margin: 0;
+        }
+        button {
+            float: left;
+            width: 100px;
+            height: 30px;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        {{message + '!'}}
+        <h3 v-text="message+'@'"></h3>
+        <h3 v-html="link"></h3>
+        <input type="button" value="v-on指令" v-on:click="doSPA">
+        <div>
+            <button @click="sub">-</button>
+            <span>{{num}}</span>
+            <button @click="add">+</button>
+        </div>
+        <br>
+        <div>
+            <button @click="changeImg">切换图片显隐</button>
+            <img src="a.jpg" alt="头像" v-show="isShow">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "ABCDEF",
+                link: "<a href='http://www.baidu.com'>百度一下</a>",
+                num:1,
+                isShow: false
+            },
+            methods: {
+                doSPA: ()=> {
+                    alert("去做SPA");
+                },
+                sub:function () {
+                    if (this.num === 0) {
+                        alert("已经是最小了")
+                        return;
+                    }
+                    this.num--;
+                },
+                add:function () {
+                    if (this.num === 10) {
+                        alert("已经是最大了");
+                        return;
+                    }
+                    this.num++;
+                },
+                changeImg: function() {
+                    this.isShow = !this.isShow;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

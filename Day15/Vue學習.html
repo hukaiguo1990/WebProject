@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue學習</title>
+</head>
+<body>
+    <h3>创建Vue例子</h3>
+    1.引入vue版本<br>
+    开发环境：
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    生产环境b:
+    <!-- 生产环境版本，优化了尺寸和速度 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    2.创建简洁的模板
+    <div id="app">
+        {{ message }}
+    </div>
+
+    3.创建vue实例
+    var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue!'
+        }
+      })
+
+    <h4>el：挂载点</h4>
+    <ol>
+        <li>el是用来设置Vue实例挂载的元素</li>
+        <li>Vue会管理el属性命中的元素及其内部的后代元素</li>
+        <li>可以使用类选择器，标签选择器，建议是用ID选择器 </li>
+        <li>模板可以使用其他的标签，但不能使用HTML和body，建议使用div</li>
+    </ol>
+    <h4>data:数据对象</h4>
+    <ol>
+        <li>Vue中用到的数据定义在data中</li>
+        <li>data中可以写复杂类型的数据</li>
+    </ol>
+    <h4>Vue指令</h4>
+    <ol>
+        <li>v-text: 设置标签的内容</li>
+        <li>v-html: 设置元素的innerHTML,内容中有html结构会被解析成标签</li>
+        <li>v-on: 为元素绑定事件，可以用@代替</li>
+        <li>v-show:根据条件的真假切换元素的显示状态，原来是修改元素的display实现元素的显隐</li>
+        <li>v-if:根据条件的真假切换元素的显示状态，和v-show不同的是v-if是操作dom元素切换状态的，性能方面:切换频繁的话建议使用v-show，反之v-if</li>
+        <li>v-bind: 简写为":" 为元素绑定属性值，如果是class属性建议使用对象的方式</li>
+        <li>v-for: 根据数据生成列表结构；语法是v-for: (item, index) in arr</li>
+        <li>v-model: 便捷的设置和获取表单元素的值，绑定的数据会和表单元素之相关联：双向绑定，不管修改那一方，另一方也会同步变更</li>
+    </ol>
+</body>
+</html>

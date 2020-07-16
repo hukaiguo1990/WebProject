@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        .basic {
+            border: 0;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        .raised {
+            border: 0;
+            box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+        }
+
+        .stroked {
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+        }
+
+        .flat {
+            border: 0;
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+        }
+
+        .warn-color {
+            color: red;
+        }
+
+        .warn-bgcolor {
+            color: #fff;
+            background-color: red;
+        }
+
+        .dialog {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            height: 300px;
+            box-sizing: border-box;
+            padding: 30px 20px;
+            border-bottom: 1px solid #000;
+        }
+
+        .content img {
+            height: 150px;
+            width: 150px;
+            background-color: pink;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            height: 150px;
+            margin: 0 20px;
+        }
+
+        .info div:nth-child(2) {
+          flex: 1;
+        }
+
+        .content button {
+            width: 100px;
+            height: 50px;
+        }
+
+        .bottom {
+            width: 100%;
+            height: 100px;
+        }
+
+        .bottom button {
+            border: 0;
+            width: 100px;
+            height: 50px;
+            background-color: #fff
+        }
+
+    </style>
+</head>
+<body>
+    <button class="basic warn-color">Warn</button><br>
+    <button class="raised warn-bgcolor">Warn</button><br>
+    <button class="stroked warn-color">Warn</button><br>
+    <button class="flat warn-bgcolor">Warn</button><br>
+
+    <div class="dialog">
+        <div class="content">
+            <img src="#" alt="头像">
+            <div class="info">
+                <div>AAAAAAA</div>
+                <div>BBBBBB</div>
+                <div>CCCCC</div>
+            </div>
+            <button class="action">action</button>
+        </div>
+        <div class="bottom">
+            <button class="action1">action1</button>
+            <button class="action2">action2</button>
+        </div>
+    </div>
+</body>
+</html>
